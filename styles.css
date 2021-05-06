@@ -1,3 +1,842 @@
 body {
-    color: #000000;
+    margin: 0;
+    overflow-x: hidden;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 500;
 }
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    padding-left: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 400;
+}
+
+h3 {
+    font-weight: 700;
+}
+
+button {
+    background-color: rgb(53, 221, 207);
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    height: 50px;
+    width: 150px;
+}
+
+header {
+    background-color: #f3f7f7;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 20;
+    box-shadow: 0px 8px 20px #dbdbdb;
+    font-family: 'Rajdhani', sans-serif;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+#title {
+    background-color: #fff;
+    max-width: 100vw;
+}
+
+#title > h1 {
+    font-family: 'Wendy One', sans-serif;
+}
+
+.mainarticles {
+    background: rgb(106,107,110);
+    background: linear-gradient(180deg, rgba(106,107,110,1) 0%, rgba(8,8,8,1) 100%);
+    color: #fff;
+}
+
+.tickets {
+    background: rgb(106,107,110);
+    background: linear-gradient(90deg, rgba(106,107,110,1) 0%, rgba(8,8,8,1) 100%);
+    color: #fff;
+}
+
+#popular {
+    background-color: rgb(245, 247, 248);
+}
+
+.stories {
+    background-color: lightblue;
+}
+
+#explore {
+    background-color: rgb(245, 247, 248);
+}
+
+.exploreitem {
+    background: rgb(83,106,203);
+    background: linear-gradient(90deg, rgba(83,106,203,1) 0%, rgba(90,32,144,1) 48%, rgba(51,66,133,1) 100%);
+    color: #fff;
+    text-align: center;
+}
+
+#newsletter {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(90,32,144,1) 26%, rgba(255,0,193,1) 50%, rgba(90,32,144,1) 71%, rgba(2,0,36,1) 100%);
+    color: #fff;
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#newsletter > h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 900;
+}
+
+#watch {
+    background-color: rgb(245, 247, 248);
+}
+
+#grootvideo {
+    background-color: lightblue;
+}
+
+.video {
+    background-color: lightblue;
+}
+
+footer {
+    background-color: #000000;
+    color: #fff;
+}
+
+footer > div > h1 {
+    font-family: 'Wendy One', sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        height: 50px;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    h2 {
+        font-size: 15px;
+    }
+
+    #title > h1 {
+        font-size: 3em;
+        margin-bottom: 0;
+    }
+
+    #title > h2 {
+        font-size: 1.2em;
+        color: rgb(88, 88, 88);
+        margin-top: 0;
+    }
+
+    .menuitem1 {
+        visibility: hidden;
+    }
+
+    .menuitem2 {
+        visibility: visible;
+        float: left;
+    }
+
+    #mainartcontainer {
+        display: flex;
+        overflow: scroll;
+    }
+
+    .mainarticles {
+        height: 250px;
+        flex: 0 0 250px;
+        margin: 0 5px;
+        font-size: 1.2em;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .mainarticles > p {
+        position: relative;
+        top: 130px;
+    }
+
+    .tickets {
+        width: 95%;
+        margin: 5px 2.5%;
+        height: 150px;
+        text-align: center;
+    }
+
+    .tickets > p {
+        font-size: 1.3em;
+        font-weight: 700;
+        position: relative;
+        top: 30px;
+    }
+
+    #popular > h3 {
+        font-size: 1.7em;
+        color: rgb(88, 88, 88);
+        padding-top: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #popcontainer > h4 {
+        font-weight: 600;
+        font-size: 1em;
+        margin-left: 40px;
+        margin-right: 30px;
+    }
+
+    span {
+        color: rgb(173, 10, 138);
+        font-size: 2em;
+        padding-right: 20px;
+    }
+
+    #latest {
+        text-align: center;
+    }
+
+    .stories {
+        height: 100px;
+        width: 90%;
+        margin: 5px 5%;
+        font-size: 1em;
+        font-weight: 600;
+    }
+
+    .stories > p {
+        padding: 30px 50px;
+    }
+
+    #explore {
+        text-align: center;
+        height: 380px;
+    }
+
+    #explorecontainer {
+        display: flex;
+        overflow: scroll;
+    }
+
+    .exploreitem {
+        height: 250px;
+        flex: 0 0 200px;
+        margin: 0 5px;
+    }
+
+    #newsletter {
+        height: 350px;
+        text-align: center;
+    }
+
+    #newsletter > h1 {
+        font-size: 1.4em;
+        padding-top: 50px;
+        padding-left: 70px;
+        padding-right: 70px;
+    }
+
+    #newsletter > p {
+        font-size: 1.1em;
+        padding: 0 50px;
+    }
+
+    input {
+        width: 60%;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        height: 50px;
+    }
+
+    #grootvideo {
+        height: 250px;
+    }
+
+    #kleinvideo {
+        height: 180px;
+        display: flex;
+        overflow: scroll;
+        margin-top: 20px;
+    }
+
+    .video {
+        flex: 0 0 200px;
+        margin: 0 5px;
+    }
+
+    #work {
+        height: 500px;
+        text-align: center;
+    }
+
+    #work > p {
+        padding: 0 20px;
+        font-size: 1.2em;
+        color: rgb(88, 88, 88);
+    }
+
+    .flinks {
+        display: inline-block;
+        margin-left: 20%;
+        color: rgb(53, 221, 207);
+        font-size: 1.1em;
+    }
+
+    .flinks > * {
+        display: block;
+    }
+
+    footer > div > h1 {
+        font-size: 3.5em;
+        padding-top: 20px;
+        margin-bottom: 0px;
+    }
+
+    footer > div > h2 {
+        margin-top: 0;
+        padding-left: 20px;
+        font-size: 1.5em;
+    }
+  }
+
+  @media screen and (min-width: 481px) and (max-width: 1024px) {
+    header {
+        height: 50px;
+    }
+
+    #title {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 3em;
+    }
+
+    h2 {
+        font-size: 2em;
+    }
+
+    #title > h1 {
+        font-size: 10em;
+        margin: 0;
+    }
+
+    #title > h2 {
+        font-size: 1.5em;
+        color: rgb(88, 88, 88);
+        align-self: center;
+        margin-top: 0;
+    }
+
+    .menuitem1 {
+        visibility: hidden;
+    }
+
+    .menuitem2 {
+        visibility: visible;
+    }
+
+    #mainart {
+        width: 80%;
+        margin: auto;
+    }
+
+    #mainartcontainer {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(4, 250px);
+        grid-gap: 10px;
+    }
+
+     .art1 {
+         grid-row: 1 / 3;
+         grid-column: 1 / -1;
+     }
+
+     .art1 > p {
+        font-size: 1.7em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 400px;
+     }
+
+     .art2 {
+         grid-row: 3 / 4;
+         grid-column: 1 / 2;
+     }
+
+     .art3 {
+        grid-row: 4 / 5;
+        grid-column: 1 / 2;
+    }
+
+    .arttxt {
+        font-size: 1.5em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .art4 {
+        grid-row: 4 / 5;
+        grid-column: 2 / 3;
+    }
+
+    .art4 > p {
+        font-size: 1.5em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 100px;
+    }
+
+    .tickets {
+        position: absolute;
+        top: 791px;
+        left: 50.5%;
+        width: 39.5%;
+        height: 250px;
+    }
+
+    .tickets > p {
+        font-size: 2em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 20px;
+    }
+
+    #popcontainer {
+        padding-bottom: 100px;
+    }
+
+    #popular > h3 {
+        font-size: 2.3em;
+        color: rgb(88, 88, 88);
+        padding-top: 30px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    #popcontainer > h4 {
+        margin-left: 100px;
+        font-weight: 600;
+        font-size: 1.3em;
+    }
+
+    span {
+        color: rgb(173, 10, 138);
+        font-size: 2em;
+        padding-right: 20px;
+    }
+
+    #storycontainer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .stories {
+        flex: 1 1 400px;
+        height: 250px;
+        margin: 10px;
+    }
+
+    .stories > p {
+        font-size: 1.5em;
+        font-weight: 600;
+        position: relative;
+        top: 160px;
+        text-align: center;
+    }
+
+    #explorecontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .exploreitem {
+        height: 300px;
+        flex: 0 1 250px;
+        margin: 0 10px;
+    }
+
+    .exploreitem > p {
+        margin-top: 190px;
+        font-size: 1.4em;
+        font-weight: 600;
+    }
+
+    .weg {
+        display: none;
+    }
+
+    #newsletter {
+        height: 300px;
+        text-align: center;
+    }
+
+    #newsletter > h1 {
+        font-size: 2.5em;
+        padding-top: 80px;
+    }
+
+    #newsletter > p {
+        font-size: 1.3em;
+    }
+
+    input {
+        width: 60%;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        height: 50px;
+    }
+
+    #watch {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        grid-template-rows: 100px 500px;
+        grid-gap: 30px;
+        margin: auto;
+        width: 80%;
+    }
+
+    #watchtitle {
+        grid-column: 1 / -1;
+    }
+
+    #grootvideo {
+        grid-column: 1 / 2;
+    }
+
+    #kleinvideo {
+        grid-column: 2 / 3;
+        overflow-y: scroll;
+    }
+
+    .video {
+        width: 97%;
+        height: 150px;
+        margin-bottom: 5px;
+    }
+
+    #work {
+        height: 500px;
+    }
+
+    #work > p {
+        width: 50%;
+        padding-left: 20px;
+        font-size: 1.5em;
+        color: rgb(88, 88, 88);
+    }
+
+    button {
+        height: 50px;
+        width: 150px;
+        font-size: 1.1em;
+        margin-left: 20px;
+    }
+
+    .flinks {
+        display: inline-block;
+        margin-left: 20%;
+        margin-bottom: 30px;
+    }
+
+    .flinks > * {
+        display: block;
+        color: rgb(53, 221, 207);
+        font-size: 1.2em;
+    }
+
+    footer > div > h1 {
+        font-size: 5em;
+        padding-top: 50px;
+        margin-bottom: 0px;
+    }
+
+    footer > div > h2 {
+        margin-top: 0;
+        padding-left: 20px;
+    }
+    
+  }
+
+  @media screen and (min-width: 1025px) {
+    h1 {
+        font-size: 2.5em;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+    
+    header {
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex: 0 0 60vw;
+    }
+
+    .menuitem1 {
+        visibility: visible;
+    }
+
+    .menuitem2 {
+        visibility: hidden;
+    }
+
+    #title {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 50px;
+    }
+
+    #title > h1 {
+        font-size: 6em;
+    }
+
+    #title > h2 {
+        font-size: 2.3em;
+        color: rgb(88, 88, 88);
+        align-self: center;
+    }
+
+    #mainartcontainer {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(5, 100px);
+        grid-gap: 10px;
+    }
+
+     .art1 {
+         grid-row: 1 / 4;
+         grid-column: 1 / 3;
+     }
+
+     .art1 > p {
+        font-size: 2.5em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 130px;
+     }
+
+     .art2 {
+         grid-row: 1 / 3;
+         grid-column: 3 / 4;
+     }
+
+     .art3 {
+        grid-row: 1 / 3;
+        grid-column: 4 / 5;
+    }
+
+    .arttxt {
+        font-size: 1.5em;
+        font-weight: 400;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    .art4 {
+        grid-row: 3 / 6;
+        grid-column: 3 / 5;
+    }
+
+    .art4 > p {
+        font-size: 2.5em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 130px;
+    }
+
+    .tickets {
+        position: absolute;
+        top: 680px;
+        width: 49.7%;
+        height: 210px;
+    }
+
+    .tickets > p {
+        font-size: 1.5em;
+        font-weight: 700;
+        padding: 20px;
+        margin-top: 60px;
+    }
+
+    #popular {
+        text-align: center;
+    }
+
+    #popular > h3 {
+        font-size: 1.5em;
+        color: rgb(88, 88, 88);
+        align-self: center;
+        padding-top: 30px;
+    }
+
+    #popcontainer {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 50px;
+    }
+
+    #popcontainer > h4 {
+        margin-left: 40px;
+        font-weight: 600;
+        font-size: 1.1em;
+    }
+
+    span {
+        color: rgb(173, 10, 138);
+        font-size: 2em;
+        padding-right: 20px;
+    }
+
+    #storycontainer {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    .stories {
+        flex: 1 1 280px;
+        height: 200px;
+        margin: 10px;
+    }
+
+    .stories > p {
+        font-size: 1.1em;
+        font-weight: 600;
+        position: relative;
+        top: 120px;
+        text-align: center;
+    }
+
+    #explorecontainer {
+        display: flex;
+        justify-content: center;
+    }
+
+    .exploreitem {
+        height: 220px;
+        flex: 0 1 200px;
+        margin: 0 10px;
+    }
+
+    .exploreitem > p {
+        margin-top: 120px;
+        font-size: 1.1em;
+        font-weight: 600;
+    }
+
+    #newsletter {
+        height: 300px;
+        text-align: center;
+    }
+
+    #newsletter > h1 {
+        font-size: 3em;
+        padding-top: 30px;
+    }
+
+    #newsletter > p {
+        font-size: 1.1em;
+    }
+
+    input {
+        width: 60%;
+        border-radius: 5px;
+        border: none;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        height: 50px;
+    }
+
+    #watch {
+        display: grid;
+        grid-template-columns: 4fr 1fr;
+        grid-template-rows: 100px 500px;
+        grid-gap: 30px;
+        padding: 0 20px;
+    }
+
+    #watchtitle {
+        grid-column: 1 / -1;
+    }
+
+    #grootvideo {
+        grid-column: 1 / 2;
+    }
+
+    #kleinvideo {
+        grid-column: 2 / 3;
+        overflow-y: scroll;
+    }
+
+    .video {
+        width: 98%;
+        height: 150px;
+        margin-bottom: 5px;
+    }
+
+    #work {
+        height: 500px;
+    }
+
+    #work > p {
+        width: 50%;
+        padding-left: 20px;
+        font-size: 1.3em;
+        color: rgb(88, 88, 88);
+    }
+
+    button {
+        height: 50px;
+        width: 150px;
+        font-size: 1.1em;
+        margin-left: 20px;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .flinks {
+        display: flex;
+        flex-direction: column;
+        padding-top: 50px;
+        color: rgb(53, 221, 207);
+    }
+
+    footer > div > h1 {
+        font-size: 3.5em;
+        margin-top: 30px;
+        margin-bottom: 0px;
+    }
+
+    footer > div > h2 {
+        margin-top: 0;
+    }
+
+  }

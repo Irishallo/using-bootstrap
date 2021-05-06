@@ -1,2 +1,2 @@
-this is a project from the odin project.
-this project is meant to learn to use bootstrap, by recreating a site that uses bootstrap.
+this is an project from the odin project.
+this projects goal is to make a responsive site. 
